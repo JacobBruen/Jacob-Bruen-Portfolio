@@ -8,14 +8,14 @@ function App() {
     <Router>
       <nav style={{ display: 'flex', gap: '1rem' }}>
         <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/projects">Projects</Link>
+        <Link to="/About">About</Link>
+        <Link to="/Projects">Projects</Link>
       </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Projects" element={<Projects />} />
       </Routes>
     </Router>
   );

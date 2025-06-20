@@ -3,7 +3,6 @@ import {
   Heading,
   Text,
   SimpleGrid,
-  Container,
   VStack,
   Link,
 } from '@chakra-ui/react';
@@ -28,10 +27,17 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Container maxW="6xl" py={10}>
-      <Heading mb={6} textAlign="center">
-        Projects
-      </Heading>
+    <Box
+      w="100%"
+      h="100%"
+      px={6}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      textAlign="center"
+    >
+      <Heading mb={6}>Projects</Heading>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
         {projects.map((proj, idx) => (
           <Box
@@ -52,7 +58,7 @@ const Projects = () => {
           </Box>
         ))}
       </SimpleGrid>
-    </Container>
+    </Box>
   );
 };
 

@@ -1,10 +1,14 @@
+import { Heading, Text, Box } from '@chakra-ui/react';
+
 const About = () => {
-    return (
-      <div>
-        <h1>About Page</h1>
-      </div>
-    );
-  };
-  
-  export default About;
-  
+  return (
+    <Box>
+      <Heading mb={4}>About Me</Heading>
+      <Text fontSize="md">
+        I'm Jacob Bruen, a passionate computer science student focused on game design, software development, and teaching future developers.
+      </Text>
+    </Box>
+  );
+};
+
+export default About;

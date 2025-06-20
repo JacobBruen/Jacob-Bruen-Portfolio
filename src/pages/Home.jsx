@@ -1,4 +1,10 @@
+import { Heading, Text, VStack } from '@chakra-ui/react';
+
 export default function Home() {
-    return <h1>Welcome to Jacob Bruen's Portfolio</h1>;
-  }
-  
+  return (
+    <VStack spacing={4} align="center">
+      <Heading>Welcome to Jacob Bruen's Portfolio</Heading>
+      <Text fontSize="lg">Explore my projects and learn more about me below.</Text>
+    </VStack>
+  );
+}

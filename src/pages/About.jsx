@@ -20,13 +20,13 @@ const About = () => {
         </Text>
 
         <HStack spacing={6}>
-          <Link href="https://instagram.com/your_username" isExternal>
+          <Link href="https://instagram.com/jacobrbruen" isExternal>
             <Icon as={FaInstagram} w={8} h={8} color="pink.400" />
           </Link>
-          <Link href="https://linkedin.com/in/your_username" isExternal>
+          <Link href="https://www.linkedin.com/in/jacob-bruen-423851289/" isExternal>
             <Icon as={FaLinkedin} w={8} h={8} color="blue.500" />
           </Link>
-          <Link href="mailto:your.email@example.com" isExternal>
+          <Link href="mailto:Jrbruen18@gmail.com" isExternal>
             <Icon as={FaEnvelope} w={8} h={8} color="gray.300" />
           </Link>
         </HStack>

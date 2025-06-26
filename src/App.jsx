@@ -28,7 +28,7 @@ function Navbar() {
       justify="center"
       gap={6}
       boxShadow="md"
-      userSelect="none"
+      overflowX="hidden"
     >
       {links.map(({ path, label }) => (
         <Button
@@ -55,10 +55,10 @@ function App() {
         minH="100vh"
         bg="gray.900"
         color="white"
+        overflowX="hidden" // 👈 this fixes the horizontal overflow
       >
         <Navbar />
 
-        {/* Page content fills remaining height */}
         <Flex flex="1" align="center" justify="center">
           <Routes>
             <Route path="/" element={<Home />} />

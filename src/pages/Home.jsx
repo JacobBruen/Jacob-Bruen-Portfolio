@@ -5,15 +5,15 @@ export default function Home() {
     <Box
       textAlign="center"
       w="100%"
-      h="100%"
+      flex="1"
       display="flex"
       alignItems="center"
       justifyContent="center"
-      flexDirection="column"
+      px={4} // 👈 prevent text from overflowing on small screens
     >
       <Stack spacing={6}>
         <Heading fontSize="4xl">Jacob Bruen</Heading>
-        <Text fontSize="xl" color="gray.300">
+        <Text fontSize="xl" color="gray.300" textAlign="center">
           Aspiring Game Designer • Software Developer • Problem Solver
         </Text>
       </Stack>

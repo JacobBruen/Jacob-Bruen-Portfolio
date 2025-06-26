@@ -8,7 +8,6 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import Socials from './pages/Socials';
 
 function Navbar() {
   const location = useLocation();
@@ -17,7 +16,6 @@ function Navbar() {
     { path: '/', label: 'Home' },
     { path: '/About', label: 'About' },
     { path: '/Projects', label: 'Projects' },
-    { path: '/Socials', label: 'Contact' },
   ];
 
   return (
@@ -50,13 +48,7 @@ function Navbar() {
 function App() {
   return (
     <Router>
-      <Flex
-        direction="column"
-        minH="100vh"
-        bg="gray.900"
-        color="white"
-        overflowX="hidden" // 👈 this fixes the horizontal overflow
-      >
+      <Flex direction="column" minH="100vh" bg="gray.900" color="white" overflowX="hidden">
         <Navbar />
 
         <Flex flex="1" align="center" justify="center">
@@ -64,7 +56,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/About" element={<About />} />
             <Route path="/Projects" element={<Projects />} />
-            <Route path="/Socials" element={<Socials />} />
           </Routes>
         </Flex>
 

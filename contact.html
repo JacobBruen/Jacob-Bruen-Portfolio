@@ -85,9 +85,12 @@
 
           <div class="col-lg-5">
 
-            <div class="info-wrap">
-              <!-- Removed Address and Map -->
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="info-wrap text-center">
+              <!-- Profile Image -->
+              <img src="assets/img/profile-img.jpg" alt="Jacob Profile" class="rounded-circle mb-4" style="width: 280px; height: 280px; object-fit: cover; border: 4px solid #eee;">
+              <!-- End Profile Image -->
+
+              <div class="info-item d-flex copy-info" data-copy="+1 815 662 8747" data-aos="fade-up" data-aos-delay="300" style="cursor:pointer;">
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Call Me</h3>
@@ -95,7 +98,7 @@
                 </div>
               </div><!-- End Info Item -->
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <div class="info-item d-flex copy-info" data-copy="Jrbruen18@gmail.com" data-aos="fade-up" data-aos-delay="400" style="cursor:pointer;">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Me</h3>
@@ -191,6 +194,40 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // Highlight icon on hover and copy to clipboard on click
+    document.querySelectorAll('.copy-info').forEach(function(item) {
+      const icon = item.querySelector('i');
+      item.addEventListener('mouseenter', function() {
+        icon.style.color = '#0d6efd';
+        icon.style.transition = 'color 0.2s';
+      });
+      item.addEventListener('mouseleave', function() {
+        icon.style.color = '';
+      });
+      item.addEventListener('click', function() {
+        const text = item.getAttribute('data-copy');
+        navigator.clipboard.writeText(text);
+        icon.style.color = '#198754';
+        setTimeout(() => { icon.style.color = '#0d6efd'; }, 300);
+
+        // Show toast
+        const toast = document.getElementById('copy-toast');
+        toast.style.display = 'block';
+        toast.style.opacity = '1';
+        setTimeout(() => {
+          toast.style.opacity = '0';
+        }, 1200);
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 1500);
+      });
+    });
+  </script>
+
+  <div id="copy-toast" style="display:none;position:fixed;bottom:40px;left:50%;transform:translateX(-50%);background:#198754;color:#fff;padding:10px 24px;border-radius:24px;z-index:9999;font-size:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.15);transition:opacity 0.2s;">
+    Copied to clipboard!
+  </div>
 
 </body>
 

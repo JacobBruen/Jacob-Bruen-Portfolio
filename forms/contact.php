@@ -14,13 +14,6 @@
   $contact->from_name = $_POST['name'];
   $contact->from_email = $_POST['email'];
   $contact->subject = $_POST['subject'];
-
-  $contact->smtp = array(
-    'host' => 'smtp.gmail.com',
-    'username' => 'jrbruen18@gmail.com',
-    'password' => 'Nova1818!@',
-    'port' => '587'
-  );
   
 
   $contact->add_message( $_POST['name'], 'From');

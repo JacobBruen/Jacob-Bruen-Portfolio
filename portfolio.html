@@ -45,11 +45,30 @@
       height: 100%;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.75);
-      opacity: 0;
-      transition: opacity 0.3s ease;
+      opacity: 1;
+      transition: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1.5rem;
     }
 
-    .project-box:hover .overlay {
+    .project-box .overlay h5 {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      /* No background, no border, no padding */
+    }
+
+    .project-box .overlay a.btn {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .project-box:hover .overlay a.btn {
       opacity: 1;
     }
   </style>
@@ -123,6 +142,15 @@
               <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
                 <h5 class="text-white">SQL Wildfire Relief DB</h5>
                 <a href="https://github.com/JacobBruen/Scorch-Shield" target="_blank" class="btn btn-outline-light mt-2">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="project-box position-relative overflow-hidden rounded shadow" style="background-image: url('assets/img/project-bg-3.jpg'); background-size: cover; height: 250px;">
+              <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
+                <h5 class="text-white">CS Undergraduate Projects</h5>
+                <a href="https://github.com/JacobBruen/CS-Undergraduate-Projects" target="_blank" class="btn btn-outline-light mt-2">View on GitHub</a>
               </div>
             </div>
           </div>

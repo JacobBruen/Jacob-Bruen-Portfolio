@@ -801,6 +801,14 @@ section,
   line-height: 0;
 }
 
+.about .img-fluid {
+  max-width: 80%;   /* Shrinks the image to 80% of its container */
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/

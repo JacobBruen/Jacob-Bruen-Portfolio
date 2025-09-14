@@ -1486,5 +1486,10 @@ section,
   opacity: 1;
 }
 
+.header-social-links a {
+  position: relative;  /* keep it in flow but above other elements */
+  z-index: 9999;       /* very high so nothing covers it */
+  pointer-events: auto; /* ensures it can be clicked */
+}
 
 

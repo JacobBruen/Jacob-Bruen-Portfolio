@@ -461,6 +461,18 @@ h6 {
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
+
+  /* Fix mobile nav X button z-index */
+  .mobile-nav-active .mobile-nav-toggle {
+    z-index: 10001 !important;
+  }
+
+  /* Lower z-index for header-social-links on mobile nav open */
+  @media (max-width: 1199px) {
+    .mobile-nav-active .header-social-links {
+      z-index: 1 !important;
+    }
+  }
 }
 
 /*--------------------------------------------------------------
@@ -759,6 +771,21 @@ section,
 
 .hero .btn-get-started:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, white 20%);
+}
+
+/* Restrict hero buttons width on mobile */
+@media (max-width: 575px) {
+  .hero .btn-get-started {
+    width: 90%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .hero .d-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
 }
 
 @media (max-width: 768px) {
